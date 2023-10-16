@@ -12,7 +12,7 @@ namespace BLAS
                   const DataType *B, const CXXBLAS_INT &ldB,
                   const DataType &beta,
                   DataType *C, const CXXBLAS_INT &ldC);
-
+/*
     template <class DataType>
         void trsm(const char &Side,
                   const char &UpperLower,
@@ -21,7 +21,8 @@ namespace BLAS
                   const CXXBLAS_INT &n,
                   const DataType *A, const CXXBLAS_INT &ldA,
                   DataType *B, const CXXBLAS_INT &ldB);
+                  */
 }
 #include "Level3/gemm.hpp"
-#include "Level3/trsm.hpp"
+//#include "Level3/trsm.hpp"
 #endif

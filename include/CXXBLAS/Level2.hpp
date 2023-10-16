@@ -33,6 +33,7 @@ namespace BLAS
                   const DataType *A,
                   DataType *x, const CXXBLAS_INT &incx);
 
+    /*
     template <class DataType>
         void trsv(const char &UpperLower,
                   const char &transpose,
@@ -40,11 +41,12 @@ namespace BLAS
                   const CXXBLAS_INT &n,
                   const DataType *A, const CXXBLAS_INT &ldA,
                   DataType *x, const CXXBLAS_INT &incx);
+                  */
 }
 
 #include "Level2/gemv.hpp"
 #include "Level2/gerc.hpp"
 #include "Level2/geru.hpp"
 #include "Level2/tpsv.hpp"
-#include "Level2/trsv.hpp"
+//#include "Level2/trsv.hpp"
 #endif
