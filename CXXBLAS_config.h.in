@@ -1,0 +1,4 @@
+#include <cstdint>
+#cmakedefine CXXBLAS_INT @CXXBLAS_INT@
+#cmakedefine CXXBLAS_BLAS
+#cmakedefine CXXBLAS_TEMPLATES
