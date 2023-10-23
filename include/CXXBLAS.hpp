@@ -1,7 +1,7 @@
 #ifndef CXXBLAS_HPP
 #define CXXBLAS_HPP
 #include <complex>
-#include "CXXBLAS_config.h.in"
+#include "CXXBLAS_config.h"
 
 #ifdef CXXBLAS_BLAS
 #include "CXXBLAS/Level1.h"
