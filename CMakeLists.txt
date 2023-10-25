@@ -8,7 +8,7 @@ include(cmake/options.cmake)
 
 include(cmake/flags.cmake)
 
-configure_file(CXXBLAS_config.h.in ${PROJECT_BINARY_DIR}/include/CXXBLAS_config.h)
+configure_file(CXXBLAS_config.h.in ${CMAKE_CURRENT_BINARY_DIR}/include/CXXBLAS_config.h)
 
 if (CXXBLAS_BLAS)
     add_subdirectory(src)
