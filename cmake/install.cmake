@@ -29,6 +29,6 @@ configure_package_config_file(
                               "${PROJECT_SOURCE_DIR}/cmake/CXXBLASConfig.cmake.in" ${CMAKE_CURRENT_BINARY_DIR}/CXXBLASConfig.cmake
                               INSTALL_DESTINATION ${CXXBLAS_CMAKE_PACKAGE_INSTALL_SUBDIR})
 
-install(FILES "${CMAKE_CURRENT_BINARY_DIR}//CXXBLASConfig.cmake"
-              "${CMAKE_CURRENT_BINARY_DIR}//CXXBLASConfigVersion.cmake"
+install(FILES "${CMAKE_CURRENT_BINARY_DIR}/CXXBLASConfig.cmake"
+              "${CMAKE_CURRENT_BINARY_DIR}/CXXBLASConfigVersion.cmake"
         DESTINATION ${CXXBLAS_CMAKE_PACKAGE_INSTALL_SUBDIR})
