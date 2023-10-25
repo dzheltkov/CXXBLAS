@@ -27,6 +27,3 @@ add_library(cxxblas BLAS_compatability.f90
 target_include_directories(cxxblas PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/mangleinclude)
 target_link_libraries(cxxblas PUBLIC BLAS::BLAS)
 target_compile_definitions(cxxblas PRIVATE $<$<CONFIG:Debug>:DEBUG>)
-target_include_directories(cxxblas PUBLIC $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
-                                          $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/include>
-                                          $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)

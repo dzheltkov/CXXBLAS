@@ -14,6 +14,9 @@ include(GNUInstallDirs)
 
 if (CXXBLAS_BLAS)
     add_subdirectory(src)
+    target_include_directories(cxxblas PUBLIC $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
+                                              $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/include>
+                                              $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
 endif()
 
 if (CXXBLAS_TEMPLATES)
