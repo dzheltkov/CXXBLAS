@@ -1,4 +1,7 @@
+#ifndef CXXBLAS_CONFIG_H
+#define CXXBLAS_CONFIG_H
 #include <cstdint>
 #cmakedefine CXXBLAS_INT @CXXBLAS_INT@
 #cmakedefine CXXBLAS_BLAS
 #cmakedefine CXXBLAS_TEMPLATES
+#endif
