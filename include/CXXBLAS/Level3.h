@@ -22,6 +22,14 @@ namespace BLAS
               const float *A, const CXXBLAS_INT &ldA,
               float *B, const CXXBLAS_INT &ldB);
 
+    void herk(const char &UpperLower,
+              const char &transpose,
+              const CXXBLAS_INT &n,
+              const CXXBLAS_INT &k,
+              const float &alpha,
+              const float *A, const CXXBLAS_INT &ldA,
+              const float &beta,
+              float *C, const CXXBLAS_INT &ldC);
 
 
     // Double variants of BLAS functions
@@ -43,6 +51,15 @@ namespace BLAS
               const CXXBLAS_INT &n,
               const double *A, const CXXBLAS_INT &ldA,
               double *B, const CXXBLAS_INT &ldB);
+
+    void herk(const char &UpperLower,
+              const char &transpose,
+              const CXXBLAS_INT &n,
+              const CXXBLAS_INT &k,
+              const double &alpha,
+              const double *A, const CXXBLAS_INT &ldA,
+              const double &beta,
+              double *C, const CXXBLAS_INT &ldC);
 
 
 
@@ -66,6 +83,15 @@ namespace BLAS
               const std::complex<float> *A, const CXXBLAS_INT &ldA,
               std::complex<float> *B, const CXXBLAS_INT &ldB);
 
+    void herk(const char &UpperLower,
+              const char &transpose,
+              const CXXBLAS_INT &n,
+              const CXXBLAS_INT &k,
+              const float &alpha,
+              const std::complex<float> *A, const CXXBLAS_INT &ldA,
+              const float &beta,
+              std::complex<float> *C, const CXXBLAS_INT &ldC);
+
 
 
     // std::complex<double> variants of BLAS functions
@@ -87,5 +113,14 @@ namespace BLAS
               const CXXBLAS_INT &n,
               const std::complex<double> *A, const CXXBLAS_INT &ldA,
               std::complex<double> *B, const CXXBLAS_INT &ldB);
+
+    void herk(const char &UpperLower,
+              const char &transpose,
+              const CXXBLAS_INT &n,
+              const CXXBLAS_INT &k,
+              const double &alpha,
+              const std::complex<double> *A, const CXXBLAS_INT &ldA,
+              const double &beta,
+              std::complex<double> *C, const CXXBLAS_INT &ldC);
 }
 #endif

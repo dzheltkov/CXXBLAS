@@ -21,6 +21,7 @@ add_library(cxxblas BLAS_compatability.f90
                     Level2/tpsv.cpp
                     Level2/trsv.cpp
                     Level3/gemm.cpp
+                    Level3/herk.cpp
                     Level3/trsm.cpp
 )
 
