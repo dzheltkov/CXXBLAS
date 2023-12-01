@@ -20,8 +20,8 @@ subroutine scnrm2_stackreturn(r, n, x, incx) bind(C)
     use, intrinsic:: iso_c_binding
     implicit none
     integer(C_INT) n, incx
-    complex(C_FLOAT_COMPLEX) r, x(*)
-    real(C_FLOAT) scnrm2
+    complex(C_FLOAT_COMPLEX) x(*)
+    real(C_FLOAT) r, scnrm2
     external scnrm2
     r = scnrm2(n, x, incx)
 end subroutine
@@ -30,8 +30,8 @@ subroutine dznrm2_stackreturn(r, n, x, incx) bind(C)
     use, intrinsic:: iso_c_binding
     implicit none
     integer(C_INT) n, incx
-    complex(C_DOUBLE_COMPLEX) r, x(*)
-    real(C_DOUBLE) dznrm2
+    complex(C_DOUBLE_COMPLEX) x(*)
+    real(C_DOUBLE) r, dznrm2
     external dznrm2
     r = dznrm2(n, x, incx)
 end subroutine
