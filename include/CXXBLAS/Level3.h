@@ -19,6 +19,16 @@ namespace BLAS
               const char &transpose,
               const char &diagonal,
               const CXXBLAS_INT &n,
+              const CXXBLAS_INT &m,
+              const float *A, const CXXBLAS_INT &ldA,
+              float *B, const CXXBLAS_INT &ldB);
+
+    void trmm(const char &Side,
+              const char &UpperLower,
+              const char &transpose,
+              const char &diagonal,
+              const CXXBLAS_INT &n,
+              const CXXBLAS_INT &m,
               const float *A, const CXXBLAS_INT &ldA,
               float *B, const CXXBLAS_INT &ldB);
 
@@ -49,6 +59,16 @@ namespace BLAS
               const char &transpose,
               const char &diagonal,
               const CXXBLAS_INT &n,
+              const CXXBLAS_INT &m,
+              const double *A, const CXXBLAS_INT &ldA,
+              double *B, const CXXBLAS_INT &ldB);
+
+    void trmm(const char &Side,
+              const char &UpperLower,
+              const char &transpose,
+              const char &diagonal,
+              const CXXBLAS_INT &n,
+              const CXXBLAS_INT &m,
               const double *A, const CXXBLAS_INT &ldA,
               double *B, const CXXBLAS_INT &ldB);
 
@@ -80,6 +100,16 @@ namespace BLAS
               const char &transpose,
               const char &diagonal,
               const CXXBLAS_INT &n,
+              const CXXBLAS_INT &m,
+              const std::complex<float> *A, const CXXBLAS_INT &ldA,
+              std::complex<float> *B, const CXXBLAS_INT &ldB);
+
+    void trmm(const char &Side,
+              const char &UpperLower,
+              const char &transpose,
+              const char &diagonal,
+              const CXXBLAS_INT &n,
+              const CXXBLAS_INT &m,
               const std::complex<float> *A, const CXXBLAS_INT &ldA,
               std::complex<float> *B, const CXXBLAS_INT &ldB);
 
@@ -111,6 +141,16 @@ namespace BLAS
               const char &transpose,
               const char &diagonal,
               const CXXBLAS_INT &n,
+              const CXXBLAS_INT &m,
+              const std::complex<double> *A, const CXXBLAS_INT &ldA,
+              std::complex<double> *B, const CXXBLAS_INT &ldB);
+
+    void trmm(const char &Side,
+              const char &UpperLower,
+              const char &transpose,
+              const char &diagonal,
+              const CXXBLAS_INT &n,
+              const CXXBLAS_INT &m,
               const std::complex<double> *A, const CXXBLAS_INT &ldA,
               std::complex<double> *B, const CXXBLAS_INT &ldB);
 

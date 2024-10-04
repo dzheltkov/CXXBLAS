@@ -2,14 +2,14 @@
 #include "CXXBLAS_config.h"
 #include <complex>
 
-#define strsm BLAS_GLOBAL(strsm,STRSM)
-#define dtrsm BLAS_GLOBAL(dtrsm,DTRSM)
-#define ctrsm BLAS_GLOBAL(ctrsm,CTRSM)
-#define ztrsm BLAS_GLOBAL(ztrsm,ZTRSM)
+#define strmm BLAS_GLOBAL(strmm,STRMM)
+#define dtrmm BLAS_GLOBAL(dtrmm,DTRMM)
+#define ctrmm BLAS_GLOBAL(ctrmm,CTRMM)
+#define ztrmm BLAS_GLOBAL(ztrmm,ZTRMM)
 
 extern "C"
 {
-    void strsm(const char &Side,
+    void strmm(const char &Side,
                const char &UpperLower,
                const char &transpose,
                const char &diagonal,
@@ -18,7 +18,7 @@ extern "C"
                const float *A, const CXXBLAS_INT &ldA,
                float *B, const CXXBLAS_INT &ldB);
 
-    void dtrsm(const char &Side,
+    void dtrmm(const char &Side,
                const char &UpperLower,
                const char &transpose,
                const char &diagonal,
@@ -27,7 +27,7 @@ extern "C"
                const double *A, const CXXBLAS_INT &ldA,
                double *B, const CXXBLAS_INT &ldB);
 
-    void ctrsm(const char &Side,
+    void ctrmm(const char &Side,
                const char &UpperLower,
                const char &transpose,
                const char &diagonal,
@@ -36,7 +36,7 @@ extern "C"
                const std::complex<float> *A, const CXXBLAS_INT &ldA,
                std::complex<float> *B, const CXXBLAS_INT &ldB);
 
-    void ztrsm(const char &Side,
+    void ztrmm(const char &Side,
                const char &UpperLower,
                const char &transpose,
                const char &diagonal,
@@ -48,7 +48,7 @@ extern "C"
 
 namespace BLAS
 {
-    void trsm(const char &Side,
+    void trmm(const char &Side,
               const char &UpperLower,
               const char &trans,
               const char &Diagonal,
@@ -61,10 +61,10 @@ namespace BLAS
         if (Trans == 'C' || Trans == 'c') {
             Trans = 'T';
         }
-        strsm(Side, UpperLower, Trans, Diagonal, n, m, A, ldA, B, ldB);
+        strmm(Side, UpperLower, Trans, Diagonal, n, m, A, ldA, B, ldB);
     }
 
-    void trsm(const char &Side,
+    void trmm(const char &Side,
               const char &UpperLower,
               const char &trans,
               const char &Diagonal,
@@ -77,10 +77,10 @@ namespace BLAS
         if (Trans == 'C' || Trans == 'c') {
             Trans = 'T';
         }
-        dtrsm(Side, UpperLower, Trans, Diagonal, n, m, A, ldA, B, ldB);
+        dtrmm(Side, UpperLower, Trans, Diagonal, n, m, A, ldA, B, ldB);
     }
 
-    void trsm(const char &Side,
+    void trmm(const char &Side,
               const char &UpperLower,
               const char &Transpose,
               const char &Diagonal,
@@ -89,10 +89,10 @@ namespace BLAS
               const std::complex<float> *A, const CXXBLAS_INT &ldA,
               std::complex<float> *B, const CXXBLAS_INT &ldB)
     {
-        ctrsm(Side, UpperLower, Transpose, Diagonal, n, m, A, ldA, B, ldB);
+        ctrmm(Side, UpperLower, Transpose, Diagonal, n, m, A, ldA, B, ldB);
     }
 
-    void trsm(const char &Side,
+    void trmm(const char &Side,
               const char &UpperLower,
               const char &Transpose,
               const char &Diagonal,
@@ -101,6 +101,6 @@ namespace BLAS
               const std::complex<double> *A, const CXXBLAS_INT &ldA,
               std::complex<double> *B, const CXXBLAS_INT &ldB)
     {
-        ztrsm(Side, UpperLower, Transpose, Diagonal, n, m, A, ldA, B, ldB);
+        ztrmm(Side, UpperLower, Transpose, Diagonal, n, m, A, ldA, B, ldB);
     }
 }
