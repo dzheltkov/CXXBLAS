@@ -2,10 +2,11 @@
 
 include(CMakeFindDependencyMacro)
 
-list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR})
+#list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR})
+set(CXXBLAS_TEMPLATES "@CXXBLAS_TEMPLATES@")
 
 find_dependency(BLAS)
 if(CXXBLAS_TEMPLATES)
-  find_dependency(OpenMP)
+  find_dependency(OpenMP COMPONENTS CXX)
 endif()
 include("${CMAKE_CURRENT_LIST_DIR}/CXXBLASTargets.cmake")
