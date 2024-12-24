@@ -51,3 +51,7 @@ find_package(CXXBLAS REQUIRED)
 add_executable(main main.cpp)
 target_link_libraries(main PRIVATE CXXBLAS::cxxblas)
 ```
+`build` (on first run of cmake):
+```shell
+cmake -DCMAKE_PREFIX_PATH=/path/to/install ..
+```
