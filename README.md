@@ -29,7 +29,7 @@ For detailed information about installation refer INSTALL.md
 
 ## Usage
 `main.cpp`:
-```
+```cpp
 #include <iostream>
 #include <vector>
 #include "CXXBLAS.hpp"
