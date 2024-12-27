@@ -26,3 +26,32 @@ cmake --install . --prefix /path/to/install
 ```
 
 For detailed information about installation refer INSTALL.md
+
+## Usage
+`main.cpp`:
+```cpp
+#include <iostream>
+#include <vector>
+#include "CXXBLAS.hpp"
+
+int main(){
+  int n = 10;
+  std::vector<double> v(n, 1);
+  std::cout << BLAS::nrm2(n, v.data(), 1) << std::endl;
+}
+```
+
+`CmakeLists.txt`:
+```cmake
+cmake_minimum_required(VERSION 3.20)
+project(TEST_CXXBLAS)
+
+find_package(CXXBLAS REQUIRED)
+
+add_executable(main main.cpp)
+target_link_libraries(main PRIVATE CXXBLAS::cxxblas)
+```
+`build` (on first run of cmake):
+```shell
+cmake -DCMAKE_PREFIX_PATH=/path/to/install ..
+```
