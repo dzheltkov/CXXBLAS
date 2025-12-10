@@ -18,8 +18,9 @@ namespace BLAS
               const char &UpperLower,
               const char &transpose,
               const char &diagonal,
-              const CXXBLAS_INT &n,
               const CXXBLAS_INT &m,
+              const CXXBLAS_INT &n,
+              const float &alpha,
               const float *A, const CXXBLAS_INT &ldA,
               float *B, const CXXBLAS_INT &ldB);
 
@@ -27,8 +28,9 @@ namespace BLAS
               const char &UpperLower,
               const char &transpose,
               const char &diagonal,
-              const CXXBLAS_INT &n,
               const CXXBLAS_INT &m,
+              const CXXBLAS_INT &n,
+              const float &alpha,
               const float *A, const CXXBLAS_INT &ldA,
               float *B, const CXXBLAS_INT &ldB);
 
@@ -58,8 +60,9 @@ namespace BLAS
               const char &UpperLower,
               const char &transpose,
               const char &diagonal,
-              const CXXBLAS_INT &n,
               const CXXBLAS_INT &m,
+              const CXXBLAS_INT &n,
+              const double &alpha,
               const double *A, const CXXBLAS_INT &ldA,
               double *B, const CXXBLAS_INT &ldB);
 
@@ -67,8 +70,9 @@ namespace BLAS
               const char &UpperLower,
               const char &transpose,
               const char &diagonal,
-              const CXXBLAS_INT &n,
               const CXXBLAS_INT &m,
+              const CXXBLAS_INT &n,
+              const double &alpha,
               const double *A, const CXXBLAS_INT &ldA,
               double *B, const CXXBLAS_INT &ldB);
 
@@ -99,8 +103,9 @@ namespace BLAS
               const char &UpperLower,
               const char &transpose,
               const char &diagonal,
-              const CXXBLAS_INT &n,
               const CXXBLAS_INT &m,
+              const CXXBLAS_INT &n,
+              const std::complex<float> &alpha,
               const std::complex<float> *A, const CXXBLAS_INT &ldA,
               std::complex<float> *B, const CXXBLAS_INT &ldB);
 
@@ -108,8 +113,9 @@ namespace BLAS
               const char &UpperLower,
               const char &transpose,
               const char &diagonal,
-              const CXXBLAS_INT &n,
               const CXXBLAS_INT &m,
+              const CXXBLAS_INT &n,
+              const std::complex<float> &alpha,
               const std::complex<float> *A, const CXXBLAS_INT &ldA,
               std::complex<float> *B, const CXXBLAS_INT &ldB);
 
@@ -140,8 +146,9 @@ namespace BLAS
               const char &UpperLower,
               const char &transpose,
               const char &diagonal,
-              const CXXBLAS_INT &n,
               const CXXBLAS_INT &m,
+              const CXXBLAS_INT &n,
+              const std::complex<double> &alpha,
               const std::complex<double> *A, const CXXBLAS_INT &ldA,
               std::complex<double> *B, const CXXBLAS_INT &ldB);
 
@@ -149,8 +156,9 @@ namespace BLAS
               const char &UpperLower,
               const char &transpose,
               const char &diagonal,
-              const CXXBLAS_INT &n,
               const CXXBLAS_INT &m,
+              const CXXBLAS_INT &n,
+              const std::complex<double> &alpha,
               const std::complex<double> *A, const CXXBLAS_INT &ldA,
               std::complex<double> *B, const CXXBLAS_INT &ldB);
 
